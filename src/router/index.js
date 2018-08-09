@@ -26,5 +26,9 @@ export let mainNavigationRoutes = [
 ];
 
 export default new Router({
-  routes: [...mainNavigationRoutes]
+  routes: [{
+    path: '/',
+    redirect: '/structures'
+  },
+    ...mainNavigationRoutes]
 });
