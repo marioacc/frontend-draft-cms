@@ -8,27 +8,27 @@ import Content from './../components/content/Content';
 Vue.use(Router);
 
 export let mainNavigationRoutes = [
-  {
-    path: '/structures',
-    name: 'Structures',
-    component: Structures
-  },
-  {
-    path: '/layouts',
-    name: 'Layout',
-    component: Layout
-  },
-  {
-    path: '/content',
-    name: 'Content',
-    component: Content
-  }
+    {
+        path: '/structures',
+        name: 'Structures',
+        component: Structures
+    },
+    {
+        path: '/layouts',
+        name: 'Layout',
+        component: Layout
+    },
+    {
+        path: '/content',
+        name: 'Content',
+        component: Content
+    }
 ];
 
 export default new Router({
-  routes: [{
-    path: '/',
-    redirect: '/structures'
-  },
-    ...mainNavigationRoutes]
+    routes: [{
+        path: '/',
+        redirect: '/structures'
+    },
+        ...mainNavigationRoutes]
 });
