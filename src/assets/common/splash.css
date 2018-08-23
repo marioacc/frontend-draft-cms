@@ -1,0 +1,16 @@
+.b-splash {
+    margin: 10% 0;
+    text-align: center;
+    width: 100%;
+}
+
+.b-splash__icon {
+    font-size: 120px;
+    opacity: 0.8;
+    color: var(--b22-dark-blue);
+}
+
+.b-splash__text {
+    margin-top: var(--spacing-md);
+    font-size: 24px;
+}

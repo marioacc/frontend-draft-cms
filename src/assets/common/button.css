@@ -1,0 +1,21 @@
+.b-button {
+    width: 120px;
+    position: relative;
+    height: 30px;
+    padding: var(--spacing-xs);
+    color: #FFF;
+    font-size: 1.4rem;
+    display: inline-block;
+    font-weight: normal;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.b-button--add {
+    background-color: var(--b22-brand-blue);
+}
+
+.b-button--add:active {
+    background-color: var(--b22-brand-blue-darker);
+}

@@ -36,6 +36,14 @@
 </script>
 
 <style scoped>
+    .b-user .b-user__image {
+        display: inline-block;
+    }
+
+    .b-user .b-user__name {
+        display: inline-block;
+    }
+
     .b-user__image {
         max-width: 50px;
         vertical-align: top;

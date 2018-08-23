@@ -1,34 +1,28 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Structures from './../components/structures/Structures';
-import Layout from './../components/layouts/Layouts';
-import Content from './../components/content/Content';
+import JobManagement from '../components/JobManagement/JobManagement';
+import ContentManagement from '../components/ContentManagement/ContentManagement';
 
 Vue.use(Router);
 
 export let mainNavigationRoutes = [
     {
-        path: '/structures',
-        name: 'Structures',
-        component: Structures
+        path: '/job-management',
+        name: 'Job Management',
+        component: JobManagement
     },
     {
-        path: '/layouts',
-        name: 'Layout',
-        component: Layout
-    },
-    {
-        path: '/content',
-        name: 'Content',
-        component: Content
+        path: '/content-management',
+        name: 'Content Management',
+        component: ContentManagement
     }
 ];
 
 export default new Router({
     routes: [{
         path: '/',
-        redirect: '/structures'
+        redirect: '/job-management'
     },
         ...mainNavigationRoutes]
 });

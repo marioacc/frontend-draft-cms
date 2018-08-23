@@ -13,15 +13,15 @@
 </template>
 
 <script>
-    import User from './../user/User';
-    import Navigation from './../navigation/Navigation';
+    import User from '../User/User';
+    import Navigation from '../Navigation/Navigation';
 
     export default {
         name: 'Header',
         components: {User, Navigation},
         data() {
             return {
-                title: "Authoring"
+                title: "WCM Front-End App"
             }
         }
     }

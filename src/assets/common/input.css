@@ -1,0 +1,15 @@
+input {
+    padding: var(--spacing-xs);
+    outline: none;
+    min-width: 120px;
+    font-size: 1.4rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+}
+
+label input {
+    margin-top: var(--spacing-sm);
+}

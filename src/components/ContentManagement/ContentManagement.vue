@@ -1,12 +1,12 @@
 <template>
-    <div class="b-content padding-all-md">
-        Content
-    </div>
+    <section class="b-section padding-all-md">
+        Content Management
+    </section>
 </template>
 
 <script>
     export default {
-        name: 'Content',
+        name: 'ContentManagement',
         data() {
             return {}
         }

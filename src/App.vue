@@ -6,7 +6,9 @@
 </template>
 
 <script>
-    import Header from './components/header/Header';
+    import Header from './components/Header/Header';
+
+    import './assets/common/index.css';
 
     export default {
         name: 'App',
@@ -17,8 +19,11 @@
 <style>
     :root {
         /* Color variables */
-        --header-background-color: #002139;
         --header-font-color: #FFFFFF;
+        --b22-brand-blue: #0F669D;
+        --b22-brand-blue-darker: #0b4b74;
+        --b22-dark-blue: #282C37;
+        --header-background-color: var(--b22-dark-blue);
 
         /* Space variables */
         --spacing-xs: 5px;
@@ -40,21 +45,8 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    h1, h2, h3 {
-        margin: 0;
-        font-weight: normal;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.6rem;
+    a {
+        cursor: pointer;
     }
 
     .padding-all-md {
@@ -71,13 +63,5 @@
 
     .b-image {
         width: 100%;
-    }
-
-    .b-user .b-user__image {
-        display: inline-block;
-    }
-
-    .b-user .b-user__name {
-        display: inline-block;
     }
 </style>
