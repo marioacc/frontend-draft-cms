@@ -1,19 +1,15 @@
 <template>
     <div class="b-job-creation">
-        <job-steps :steps="steps"></job-steps>
-        <set-up-virtual-portal v-show="activeStep.id === stepNames.SET_UP_VIRTUAL_PORTAL"></set-up-virtual-portal>
-        <set-up-library v-show="activeStep.id === stepNames.SET_UP_LIBRARY"></set-up-library>
-        <upload-file-for-job v-show="activeStep.id === stepNames.UPLOAD_FILE"></upload-file-for-job>
+        <job-steps :steps="steps"/>
+        <set-up-virtual-portal v-show="activeStep.id === stepNames.SET_UP_VIRTUAL_PORTAL"/>
+        <set-up-library v-show="activeStep.id === stepNames.SET_UP_LIBRARY"/>
+        <upload-file-for-job v-show="activeStep.id === stepNames.UPLOAD_FILE"/>
+        <configure-mapping v-show="activeStep.id === stepNames.SET_MAPPING_CONFIGURATION"/>
     </div>
 </template>
 
 <script>
     import {mapGetters} from 'vuex';
-
-    import JobSteps from "../JobSteps/JobSteps";
-    import SetUpVirtualPortal from "./SetUpVirtualPortal";
-    import SetUpLibrary from "./SetUpLibrary";
-    import UploadFileForJob from "./UploadFileForJob";
 
     import {
         SET_UP_VIRTUAL_PORTAL,
@@ -23,10 +19,17 @@
         DO_FINAL_REVIEW,
         SUBMIT_ACTION,
         GET_RESULTS
-    } from './../../store/modules/job-creation';
+    } from '../../store/modules/job-creation-steps';
+
+    import JobSteps from "../JobSteps/JobSteps";
+    import SetUpVirtualPortal from "./SetUpVirtualPortal";
+    import SetUpLibrary from "./SetUpLibrary";
+    import UploadFileForJob from "./UploadFileForJob";
+    import ConfigureMapping from "./ConfigureMapping";
 
     export default {
         components: {
+            ConfigureMapping,
             UploadFileForJob,
             JobSteps,
             SetUpVirtualPortal,

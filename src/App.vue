@@ -47,6 +47,7 @@
 
     a {
         cursor: pointer;
+        color: var(--b22-brand-blue);
     }
 
     .padding-all-md {

@@ -8,6 +8,9 @@ export const SUBMIT_ACTION = "SUBMIT_ACTION";
 export const GET_RESULTS = "GET_RESULTS";
 
 const state = {
+    activeJob: {},
+    fieldMappings: [{fileFieldName: "", wcmFieldName: ""}],
+    activeStep: undefined,
     steps: [
         {id: SET_UP_VIRTUAL_PORTAL, name: "Set up virtual portal", isComplete: false},
         {id: SET_UP_LIBRARY, name: "Set up library", isComplete: false},
@@ -22,7 +25,9 @@ const state = {
 // getters
 const getters = {
     steps: state => state.steps,
-    activeStep: state => state.steps.find(step => step.active) || state.steps[0]
+    activeStep: state => state.steps.find(step => step.active) || state.steps[0],
+    activeJob: state => state.activeJob,
+    fieldMappings: state => state.fieldMappings
 };
 
 // actions
@@ -35,6 +40,31 @@ const mutations = {
             step.active = step.id === id;
             return step;
         });
+    },
+    addVirtualPortalName(state, name = "") {
+        state.activeJob.virtualPortalName = name;
+        let index = state.steps.findIndex(step => step.id === SET_UP_VIRTUAL_PORTAL);
+        state.steps[index].isComplete = !!name.length;
+    },
+    addVLibraryName(state, name = "") {
+        state.activeJob.libraryName = name;
+        let index = state.steps.findIndex(step => step.id === SET_UP_LIBRARY);
+        state.steps[index].isComplete = !!name.length;
+    },
+    addFileToJob(state, file) {
+        state.activeJob.file = file;
+        let index = state.steps.findIndex(step => step.id === UPLOAD_FILE);
+        state.steps[index].isComplete = !!file;
+    },
+    addFieldMapping(state, {index, propertyName, value}) {
+        state.fieldMappings[index][propertyName] = value;
+
+
+        // let index = state.steps.findIndex(step => step.id === UPLOAD_FILE);
+        // state.steps[index].isComplete = !!value;
+    },
+    addEmptyFieldMapping(state) {
+        state.fieldMappings.push({fileFieldName: "", wcmFieldName: ""});
     }
 };
 
