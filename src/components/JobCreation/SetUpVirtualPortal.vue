@@ -1,7 +1,7 @@
 <template>
     <div class="b-job-step__virtual-portal">
         <label>
-            Virtual portal name
+            <strong>Virtual portal name</strong>
             <input type="text" class="b-input b-input--text b-input__virtual-portal-name"
                    @change="addVirtualPortalName($event.target.value)"/>
         </label>

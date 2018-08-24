@@ -1,5 +1,6 @@
 <template>
     <div class="b-job-step__configure-mapping">
+        <div><strong>Provide mapping configuration</strong></div>
         <div class="b-field-mapping" v-for="(mapping, index) in fieldMappings" :key="index">
             <label>
                 {{index + 1}}) Field name in Excel
@@ -34,6 +35,15 @@
 <style scoped>
     .b-input__configure-mapping {
         display: block;
+    }
+
+    .b-field-mapping {
+        display: inline-block;
+        padding: var(--spacing-sm);
+        background-color: #f2f2f2;
+        margin-right: var(--spacing-lg);
+        margin-top: var(--spacing-md);
+        vertical-align: bottom;
     }
 
     label + label {

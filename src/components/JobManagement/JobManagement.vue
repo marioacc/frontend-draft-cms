@@ -28,7 +28,7 @@
     .b-job-actions-wrapper {
         border: 1px dashed var(--b22-dark-blue);
         padding: var(--spacing-md);
-        min-height: 250px;
+        min-height: 350px;
         margin-bottom: var(--spacing-md);
     }
 

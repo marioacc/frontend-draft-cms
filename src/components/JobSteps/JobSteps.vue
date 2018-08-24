@@ -2,7 +2,7 @@
     <div class="b-job-steps">
         <div class="b-job-steps__element" v-for="step in steps" :key="step.id" :class="{active: step.active}"
              @click="setActiveStep(step.id)">
-            <a class="b-job-steps__anchor">{{step.name}}
+            <a class="b-job-steps__anchor" href="#" onclick="return false">{{step.name}}
                 <div class="b-job-step__status" :class="{complete: step.isComplete}">
                     {{step.isComplete ? " Complete" : "Incomplete"}}
                 </div>
@@ -36,6 +36,8 @@
         padding: var(--spacing-xs);
         margin-right: var(--spacing-md);
         opacity: 0.3;
+        text-align: center;
+        min-width: 120px;
         border-bottom: 1px solid transparent;
         text-decoration: none;
     }
@@ -46,7 +48,6 @@
     }
 
     .b-job-steps__element .b-job-step__status {
-        text-align: center;
         color: red;
     }
 

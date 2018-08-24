@@ -32,7 +32,7 @@
         position: relative;
         background-color: var(--header-background-color);
         color: var(--header-font-color);
-        height: 200px;
+        height: 150px;
         padding: var(--spacing-md);
     }
 </style>

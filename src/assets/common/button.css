@@ -19,3 +19,11 @@
 .b-button--add:active {
     background-color: var(--b22-brand-blue-darker);
 }
+
+.b-button--submit {
+    background-color: var(--b22-brand-blue);
+}
+
+.b-button--submit:active {
+    background-color: var(--b22-brand-blue-darker);
+}

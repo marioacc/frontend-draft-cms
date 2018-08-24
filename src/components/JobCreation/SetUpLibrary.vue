@@ -1,7 +1,7 @@
 <template>
     <div class="b-job-step__library-name">
         <label>
-            Library name
+            <strong>Library name</strong>
             <input type="text" class="b-input b-input--text b-input__library-name"
                    @change="addVLibraryName($event.target.value)"/>
         </label>
